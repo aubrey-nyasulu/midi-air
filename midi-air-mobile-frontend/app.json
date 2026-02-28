@@ -47,7 +47,8 @@
             [
                 "react-native-vision-camera",
                 {
-                    "cameraPermissionText": "MIDIAir needs camera access for air drumming."
+                    "cameraPermissionText": "MIDIAir needs camera access for air drumming.",
+                    "enableFrameProcessors": false
                 }
             ]
         ],
