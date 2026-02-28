@@ -1,0 +1,65 @@
+{
+    "expo": {
+        "name": "MIDIAir",
+        "slug": "midiair",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/images/icon.png",
+        "scheme": "midiairmobilefrontend",
+        "userInterfaceStyle": "automatic",
+        "newArchEnabled": true,
+        "ios": {
+            "supportsTablet": true,
+            "infoPlist": {
+                "NSCameraUsageDescription": "MIDIAir needs camera access for air drumming."
+            }
+        },
+        "android": {
+            "adaptiveIcon": {
+                "backgroundColor": "#E6F4FE",
+                "foregroundImage": "./assets/images/android-icon-foreground.png",
+                "backgroundImage": "./assets/images/android-icon-background.png",
+                "monochromeImage": "./assets/images/android-icon-monochrome.png"
+            },
+            "edgeToEdgeEnabled": true,
+            "predictiveBackGestureEnabled": false,
+            "permissions": ["android.permission.CAMERA"],
+            "package": "com.aubrey_nyasulu.midiairmobilefrontend"
+        },
+        "web": {
+            "output": "static",
+            "favicon": "./assets/images/favicon.png"
+        },
+        "plugins": [
+            "expo-router",
+            [
+                "expo-splash-screen",
+                {
+                    "image": "./assets/images/splash-icon.png",
+                    "imageWidth": 200,
+                    "resizeMode": "contain",
+                    "backgroundColor": "#ffffff",
+                    "dark": {
+                        "backgroundColor": "#000000"
+                    }
+                }
+            ],
+            [
+                "react-native-vision-camera",
+                {
+                    "cameraPermissionText": "MIDIAir needs camera access for air drumming."
+                }
+            ]
+        ],
+        "experiments": {
+            "typedRoutes": true,
+            "reactCompiler": true
+        },
+        "extra": {
+            "router": {},
+            "eas": {
+                "projectId": "eb1a25be-d022-479f-9134-fac9695c430a"
+            }
+        }
+    }
+}
