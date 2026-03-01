@@ -18,7 +18,9 @@ export default function HomeScreen() {
             }
         >
             <ThemedView style={styles.titleContainer}>
-                <ThemedText type="title">Welcome!</ThemedText>
+                <ThemedText onPress={() => console.log('pressed')} type="title">
+                    Welcome!
+                </ThemedText>
                 <HelloWave />
             </ThemedView>
         </ParallaxScrollView>

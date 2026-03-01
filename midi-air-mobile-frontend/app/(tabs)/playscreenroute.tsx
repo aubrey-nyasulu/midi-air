@@ -3,4 +3,5 @@ import React from 'react'
 
 export default function PlayscreenRoute() {
     return <PlayScreen />
+    // return <ThemedText>Play screen</ThemedText>
 }
