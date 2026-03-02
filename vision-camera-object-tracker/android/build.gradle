@@ -26,6 +26,10 @@ buildscript {
   }
 }
 
+repositories {
+    google()
+    mavenCentral()
+}
 
 apply plugin: "com.android.library"
 apply plugin: "kotlin-android"
@@ -63,5 +67,18 @@ android {
 }
 
 dependencies {
-  implementation "com.facebook.react:react-android"
+    implementation "com.facebook.react:react-android"
+
+    // This path is specific to how 'create-react-native-library' structures the project
+    def visionCameraPath = "${projectDir}/../node_modules/react-native-vision-camera/android"
+    
+    // Check if the directory exists, then include it
+    if (file(visionCameraPath).exists()) {
+        implementation project(':react-native-vision-camera')
+    } else {
+        // Fallback for different folder structures
+        implementation "com.mrousavy.camera:react-native-vision-camera:*"
+    }
+
+    implementation 'org.opencv:opencv:4.9.0'
 }

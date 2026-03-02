@@ -5,9 +5,21 @@ import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
-import java.util.HashMap
+// Update this import to plural 'frameprocessors'
+import com.mrousavy.camera.frameprocessors.FrameProcessorPluginRegistry
 
 class VisionCameraObjectTrackerPackage : BaseReactPackage() {
+
+  // This is the part that registers the "trackObject" name for the camera
+  companion object {
+    init {
+      // Ensure this matches the plural package name
+      FrameProcessorPluginRegistry.addFrameProcessorPlugin("trackObject") { proxy, options ->
+        ObjectTrackerPlugin(proxy, options)
+      }
+    }
+  }
+
   override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
     return if (name == VisionCameraObjectTrackerModule.NAME) {
       VisionCameraObjectTrackerModule(reactContext)
