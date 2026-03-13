@@ -5,6 +5,7 @@ import { HelloWave } from '@/src/components/hello-wave'
 import ParallaxScrollView from '@/src/components/parallax-scroll-view'
 import { ThemedText } from '@/src/components/themed-text'
 import { ThemedView } from '@/src/components/themed-view'
+import TestObjectDetectorPlugin from './components/TestObjectDetectorPlugin'
 
 export default function HomeScreen() {
     return (
@@ -23,6 +24,8 @@ export default function HomeScreen() {
                 </ThemedText>
                 <HelloWave />
             </ThemedView>
+
+            <TestObjectDetectorPlugin />
         </ParallaxScrollView>
     )
 }
