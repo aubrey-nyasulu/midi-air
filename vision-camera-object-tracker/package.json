@@ -47,14 +47,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aubrey-nyasulu/react-native-vision-camera-object-tracker.git"
+    "url": "git+https://github.com/aubrey-nyasulu/midi-air.git"
   },
   "author": "Aubrey Nyasulu <aubreynyasulu98@gmail.com> (https://github.com/aubrey-nyasulu)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aubrey-nyasulu/react-native-vision-camera-object-tracker/issues"
+    "url": "https://github.com/aubrey-nyasulu/midi-air.git/issues"
   },
-  "homepage": "https://github.com/aubrey-nyasulu/react-native-vision-camera-object-tracker#readme",
+  "homepage": "https://github.com/aubrey-nyasulu/midi-air.git#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

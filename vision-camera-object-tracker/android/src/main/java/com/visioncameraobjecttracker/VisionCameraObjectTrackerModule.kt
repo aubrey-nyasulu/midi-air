@@ -1,5 +1,3 @@
-package com.visioncameraobjecttracker
-
 import com.facebook.react.bridge.ReactApplicationContext
 import com.lib.Utils
 import com.facebook.react.bridge.*
