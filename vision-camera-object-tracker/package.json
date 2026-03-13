@@ -80,7 +80,6 @@
     "react-native": "0.83.2",
     "react-native-builder-bob": "^0.40.13",
     "react-native-vision-camera": "^4.7.3",
-    "react-native-vision-camera-ocr-plus": "^1.2.4",
     "release-it": "^19.0.4",
     "turbo": "^2.5.6",
     "typescript": "^5.9.2"
@@ -89,7 +88,6 @@
     "react": "*",
     "react-native": "*",
     "react-native-vision-camera": ">= 4.0.0",
-    "react-native-vision-camera-ocr-plus": ">= 1.0.0",
     "react-native-worklets-core": ">= 1.0.0"
   },
   "workspaces": [

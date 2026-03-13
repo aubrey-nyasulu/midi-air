@@ -1,3 +1,5 @@
+# This is not ready for use yet, it is in its very earliest phase, please do not install. we are just testing things out.
+
 # react-native-vision-camera-object-tracker
 
 A high-performance, real-time spatial tracking plugin for VisionCamera. It enables ultra-low latency object detection and coordinate mapping using native color segmentation
