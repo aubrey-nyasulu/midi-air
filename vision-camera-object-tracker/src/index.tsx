@@ -1,7 +1,3 @@
-export * from './VisionCameraObjectTrackerWorklet';
+export { useObjectDetection } from './detectObjectInFrame';
 
-import VisionCameraObjectTracker from './NativeVisionCameraObjectTracker';
-
-export const helloKotlin = (name: string) => {
-  return VisionCameraObjectTracker.helloKotlin(name);
-};
+export { testAsync } from './VisionCameraObjectTrackerModule';

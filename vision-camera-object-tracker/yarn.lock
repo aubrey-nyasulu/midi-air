@@ -11199,7 +11199,6 @@ __metadata:
     react: "*"
     react-native: "*"
     react-native-vision-camera: ">= 4.0.0"
-    react-native-worklets-core: ">= 1.0.0"
   languageName: unknown
   linkType: soft
 

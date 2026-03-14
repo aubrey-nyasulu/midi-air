@@ -1,6 +1,6 @@
 {
   "name": "react-native-vision-camera-object-tracker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A high-performance, real-time spatial tracking plugin for VisionCamera. It enables ultra-low latency object detection and coordinate mapping using native color segmentation",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
@@ -47,14 +47,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aubrey-nyasulu/midi-air.git"
+    "url": "git+https://github.com/aubrey-nyasulu/react-native-vision-camera-object-tracker.git"
   },
   "author": "Aubrey Nyasulu <aubreynyasulu98@gmail.com> (https://github.com/aubrey-nyasulu)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aubrey-nyasulu/midi-air.git/issues"
+    "url": "https://github.com/aubrey-nyasulu/react-native-vision-camera-object-tracker/issues"
   },
-  "homepage": "https://github.com/aubrey-nyasulu/midi-air.git#readme",
+  "homepage": "https://github.com/aubrey-nyasulu/react-native-vision-camera-object-tracker#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -87,8 +87,7 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "react-native-vision-camera": ">= 4.0.0",
-    "react-native-worklets-core": ">= 1.0.0"
+    "react-native-vision-camera": ">= 4.0.0"
   },
   "workspaces": [
     "example"
@@ -111,14 +110,6 @@
         }
       ]
     ]
-  },
-  "codegenConfig": {
-    "name": "VisionCameraObjectTrackerSpec",
-    "type": "modules",
-    "jsSrcsDir": "src",
-    "android": {
-      "javaPackageName": "com.visioncameraobjecttracker"
-    }
   },
   "prettier": {
     "quoteProps": "consistent",

@@ -7,6 +7,7 @@ import {
     useCameraPermission,
     useFrameProcessor,
 } from 'react-native-vision-camera'
+import { useObjectDetection } from 'react-native-vision-camera-object-tracker'
 import { Worklets } from 'react-native-worklets-core'
 
 // For TS and Worklet persistence
@@ -32,6 +33,11 @@ export default function PlayScreen() {
 
     const runOnJSLogFrame = Worklets.createRunOnJS(onDrumHit)
 
+    const objectDetector = useObjectDetection({
+        kindOfObject: 'colorBlob',
+        targetColor: 'red', // We'll look for your red-tipped stick
+    })
+
     const frameProcessor = useFrameProcessor(
         frame => {
             'worklet'
@@ -43,6 +49,9 @@ export default function PlayScreen() {
                 global.lastTimestamp = now
 
                 // 'vision-camera-hand-detector' here.
+                const result: any = objectDetector.detectObject(frame)
+
+                console.log({ result })
 
                 if (frame.width > 0) {
                     // If we detect "movement" in the left 30% of the frame

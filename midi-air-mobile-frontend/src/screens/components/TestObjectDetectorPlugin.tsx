@@ -1,12 +1,23 @@
+import { useEffect, useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { helloKotlin } from 'react-native-vision-camera-object-tracker'
+import { testAsync } from 'react-native-vision-camera-object-tracker'
 
 export default function TestObjectDetectorPlugin() {
+    const [fromAsync, setFromAsync] = useState('default')
+
+    useEffect(() => {
+        const run = async () => {
+            const value = await testAsync()
+
+            setFromAsync(value)
+        }
+
+        run()
+    }, [])
+
     return (
         <View style={styles.overlay} pointerEvents="none">
-            <Text style={styles.label}>
-                MIDIAir Tracking: {helloKotlin('Aubrey')}
-            </Text>
+            <Text style={styles.label}>fromAsync</Text>
         </View>
     )
 }
